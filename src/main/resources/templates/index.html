@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <img src="img/logo.png" alt="logo pokemon">
+            <div class="derecha">
+                <a th:href="@{/registrar}">Registrar</a>
+                <a th:href="@{/login}">Acceder</a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="secd">
+            <h1>Bienvenido Pokemon</h1>
+            <p>Registrate o Accede</p>
+        </div>
+        <img src="img/charizard.png" alt="charizard" class="seci">
+    </section>
+    <div>
+        <!-- <h3><a th:href="@{/listaUsuarios}">Lista Usuarios</a></h3> -->
+    </div>
+</body>
+
+</html>

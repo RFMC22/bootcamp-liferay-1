@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenadores Pokemon</title>
+    <link type="text/css" href="css/style4.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Lista de Entrenadores</h1>
+    <a th:href="@{/}">regresar</a>
+    <img src="img/totodile.png" alt="totodile" class="imagen">
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Correo</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+        <tbody>
+            <tr th:each="usuario: ${listaUsuario}">
+                <td th:text="${usuario.id}"></td>
+                <td th:text="${usuario.correo}"></td>
+                <td th:text="${usuario.nombre}"></td>
+                <td th:text="${usuario.apellido}"></td>
+                <td><a th:href="@{/editar/} + ${usuario.id}" >editar</a></td>
+
+                <td><a th:href="@{/eliminar(id=${usuario.id})}" >eliminar</a></td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+
+</html>
